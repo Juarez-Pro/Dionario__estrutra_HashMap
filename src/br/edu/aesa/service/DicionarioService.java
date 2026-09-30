@@ -9,6 +9,7 @@ public class DicionarioService {
 
     public boolean cadastrar(String chaveIngles, String valorPortugues) {
         if (dicionario.containsKey(chaveIngles)) {
+            System.out.println("Palavra já cadastrada...");
             return false;
         }
 
@@ -30,7 +31,8 @@ public class DicionarioService {
     }
 
     public boolean atualizar(String chaveInglesAtual, String novaChaveIngles, String novaTraducaoPortugues) {
-        if (!dicionario.containsKey(chaveInglesAtual) || dicionario.containsKey(novaChaveIngles)){
+        if ( dicionario.containsKey(novaChaveIngles)){
+            System.out.println("Nova palavra já existe no dicionário... ");
             return false;
         }
 
