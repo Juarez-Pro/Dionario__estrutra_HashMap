@@ -10,8 +10,6 @@ A aplicação funciona no terminal e permite realizar operações de **cadastro,
 
 A apresentação do projeto pode ser acessada pelo link abaixo:
 
-[▶️ Assistir à apresentação do projeto](LINK_DO_VIDEO)
-
 > video -> https://drive.google.com/file/d/18aPChCJIrwIvlwpCxxTF51Btj-jsiXhg/view?usp=sharing.
 
 ---
