@@ -31,7 +31,7 @@ public class DicionarioService {
     }
 
     public boolean atualizar(String chaveInglesAtual, String novaChaveIngles, String novaTraducaoPortugues) {
-        if ( dicionario.containsKey(novaChaveIngles)){
+        if ( dicionario.containsKey(novaChaveIngles) && !novaChaveIngles.equals(chaveInglesAtual)){
             System.out.println("Nova palavra já existe no dicionário... ");
             return false;
         }

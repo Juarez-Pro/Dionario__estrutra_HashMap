@@ -7,24 +7,23 @@ void main() {
     Scanner teclado = new Scanner(System.in);
     DicionarioService dicionario = new DicionarioService();
 
-    int opcao;
+    String opcao;
     do {
         exibirMenu();
-        System.out.print("Escolha uma opção: ");
-        opcao = teclado.nextInt();
+        opcao = lerTexto(teclado, "Escolha uma opção: ");
         System.out.println();
 
         switch (opcao) {
-            case 1 -> telaCadastrar(teclado, dicionario);
-            case 2 -> telaListarTodos(dicionario);
-            case 3 -> telaBuscar(teclado, dicionario);
-            case 4 -> telaAtualizar(teclado, dicionario);
-            case 5 -> telaRemover(teclado, dicionario);
-            case 0 -> System.out.println("Programa encerrado. Até logo!");
+            case "1" -> telaCadastrar(teclado, dicionario);
+            case "2" -> telaListarTodos(dicionario);
+            case "3" -> telaBuscar(teclado, dicionario);
+            case "4" -> telaAtualizar(teclado, dicionario);
+            case "5" -> telaRemover(teclado, dicionario);
+            case "0" -> System.out.println("Programa encerrado. Até logo!");
             default -> System.out.println("Opção inválida. Tente novamente.");
         }
 
-    } while (opcao != 0);
+    } while (!opcao.equals("0"));
 }
 
 private static void exibirMenu() {
